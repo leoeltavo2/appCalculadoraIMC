@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gq8-P3-DWp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculadora IMC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="fKL-aX-6Lm">
+                                <rect key="frame" x="10" y="140" width="394" height="726"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imc" translatesAutoresizingMaskIntoConstraints="NO" id="11w-I2-vB2">
+                                        <rect key="frame" x="72" y="0.0" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="1yt-pA-g2V"/>
+                                            <constraint firstAttribute="width" constant="250" id="Hyo-hP-SAz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1th-kj-tvy">
+                                        <rect key="frame" x="0.0" y="338" width="394" height="72"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yoZ-x6-naO">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu peso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-OR-qDo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeM-FD-IFf">
+                                                        <rect key="frame" x="202" y="0.0" width="192" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="101" minValue="3" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="0Eu-DT-q97">
+                                                <rect key="frame" x="-2" y="42" width="381" height="31"/>
+                                                <connections>
+                                                    <action selector="pesoSliderAccion:" destination="BYZ-38-t0r" eventType="valueChanged" id="82t-Sc-dAO"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-gU-BqR">
+                                        <rect key="frame" x="10.5" y="498" width="373" height="109"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="NEy-Ik-Uru">
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu altura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-bj-ROF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rys-rd-hYo">
+                                                        <rect key="frame" x="323" y="0.0" width="50" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="50" maxValue="220" translatesAutoresizingMaskIntoConstraints="NO" id="bh7-n5-OqV">
+                                                <rect key="frame" x="-2" y="79" width="377" height="31"/>
+                                                <connections>
+                                                    <action selector="alturaSliderAccion:" destination="BYZ-38-t0r" eventType="valueChanged" id="k6d-CE-qte"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0A-Pb-0jP">
+                                        <rect key="frame" x="155" y="695" width="84.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Caclcular"/>
+                                        <connections>
+                                            <action selector="calcularBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXZ-r1-eka"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.56664352539639173" green="0.84858920582989694" blue="0.34707600652684534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fKL-aX-6Lm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="E7I-XX-VI8"/>
+                            <constraint firstAttribute="bottom" secondItem="fKL-aX-6Lm" secondAttribute="bottom" constant="30" id="Fog-Bf-3Sn"/>
+                            <constraint firstItem="fKL-aX-6Lm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tji-1d-wFq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fKL-aX-6Lm" secondAttribute="trailing" constant="10" id="wpg-GL-dhZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculadora IMC" id="1eM-IB-hZd"/>
+                    <connections>
+                        <outlet property="alturaLabel" destination="Rys-rd-hYo" id="6wi-Ye-Wwz"/>
+                        <outlet property="pesoLabel" destination="UeM-FD-IFf" id="68T-Sl-px9"/>
+                        <outlet property="sliderAltura" destination="bh7-n5-OqV" id="Z4L-jb-mnp"/>
+                        <outlet property="sliderPeso" destination="0Eu-DT-q97" id="jbK-h5-RnN"/>
+                        <segue destination="n68-Aw-Fqc" kind="show" identifier="calcular" id="ePa-NQ-7QQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="104"/>
+        </scene>
+        <!--Resultado View Controller-->
+        <scene sceneID="WAQ-uZ-e4j">
+            <objects>
+                <viewController id="n68-Aw-Fqc" customClass="ResultadoViewController" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k52-yU-Jfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qym-p9-ykv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Utw-KD-CL5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2t8-XT-ceb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F75-or-zRX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gq8-P3-DWp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="kiE-uZ-ygj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2xU-Dn-952"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPO-ae-RKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imc" width="300" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
