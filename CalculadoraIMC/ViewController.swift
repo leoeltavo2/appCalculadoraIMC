@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        alturaLabel.text = "\(sliderAltura.value) Cms."
+        pesoLabel.text = "\(sliderPeso.value) Kg."
     }
 
     @IBAction func calcularBtn(_ sender: UIButton) {
