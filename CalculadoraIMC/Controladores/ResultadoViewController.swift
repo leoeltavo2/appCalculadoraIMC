@@ -9,12 +9,20 @@ import UIKit
 
 class ResultadoViewController: UIViewController {
     
-    
+    //Recibir los valores
+    var valorIMC: String?
+    var msj: String?
+    var color: UIColor?
 
+ 
+    @IBOutlet weak var valorIMCLbl: UILabel!
+    @IBOutlet weak var msjIMCLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        msjIMCLbl.text = msj
+        valorIMCLbl.text = valorIMC
     }
     
 

@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var cerebroCalculadora = cerebroIMC()
+    
+    
     @IBOutlet weak var sliderAltura: UISlider!
     @IBOutlet weak var sliderPeso: UISlider!
     
@@ -23,12 +26,29 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calcularBtn(_ sender: UIButton) {
+        //HAcer el cálculo
+        
+        let peso = sliderPeso.value
+        let altura = sliderAltura.value
+        
+        //Crear el objeto
+        
+        cerebroCalculadora.calcularIMC(peso: peso, altura: altura)
+        print(peso)
+        print(altura)
+        
         performSegue(withIdentifier: "calcular", sender: nil)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "calcular" {
             let destino = segue.destination as! ResultadoViewController
+            destino.valorIMC = cerebroCalculadora.retornarValorIMC()
+            destino.msj = cerebroCalculadora.retornarMSJ()
+            destino.color = cerebroCalculadora.retornarColor()
+            
         }
     }
     
