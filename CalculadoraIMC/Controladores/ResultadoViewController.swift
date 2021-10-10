@@ -13,16 +13,22 @@ class ResultadoViewController: UIViewController {
     var valorIMC: String?
     var msj: String?
     var color: UIColor?
-
+    var imagen: UIImage?
  
     @IBOutlet weak var valorIMCLbl: UILabel!
     @IBOutlet weak var msjIMCLbl: UILabel!
+    @IBOutlet weak var imgImagen: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         msjIMCLbl.text = msj
-        valorIMCLbl.text = valorIMC
+        msjIMCLbl.textColor = color
+        
+        valorIMCLbl.text = "Resultado: \(valorIMC!)"
+        valorIMCLbl.textColor = color
+        
+        imgImagen.image = imagen
     }
     
 

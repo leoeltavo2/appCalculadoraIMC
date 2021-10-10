@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var alturaLabel: UILabel!
     @IBOutlet weak var pesoLabel: UILabel!
     
+    @IBOutlet weak var lblo: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         alturaLabel.text = "\(sliderAltura.value) Cms."
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
         
         //Crear el objeto
         
-        cerebroCalculadora.calcularIMC(peso: peso, altura: altura)
+        cerebroCalculadora.calcularIMC(peso: peso, altura: (altura/100))
         print(peso)
         print(altura)
         
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
             destino.valorIMC = cerebroCalculadora.retornarValorIMC()
             destino.msj = cerebroCalculadora.retornarMSJ()
             destino.color = cerebroCalculadora.retornarColor()
-            
+            destino.imagen = cerebroCalculadora.retornarImagen()
         }
     }
     
